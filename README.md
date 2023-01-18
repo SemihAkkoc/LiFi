@@ -28,33 +28,33 @@ The project is working on Basys3 board and the decoder part has been implemented
       - Decoder
 
 To clarify what each module's role is, modules will be briefly explained below:<br />
-***LiFi:***<br />
+***LiFi:***
 The LiFi module is the top module that implements the receiver and transmitter as intended.<br />
-***fClock:***<br />
+***fClock:***
 Due to the fact that Basys3 has a 10ns clock and the circuit operates at 0.1s, this module generates a clock with a period of 0.1 seconds.<br />
-***sClock:***<br />
+***sClock:***
 Since the circuit operates at 0.1s and the transfer happens with 8-bit chunks, this module generates a clock with a period of 0.8 seconds.<br />
 ***Transmitter:***
-This module is the transmitter module where the data stored in the ROMs are transmitted via laser.
+This module is the transmitter module where the data stored in the ROMs are transmitted via laser.<br />
 ***AddressCounter:***
-The AddressCounter output is used to change the address inputs of the ROMs so that after changing the counter, ROMs can be searched.  
+The AddressCounter output is used to change the address inputs of the ROMs so that after changing the counter, ROMs can be searched.  <br />
 ***textROM:***
-The ROM stores the encoded text file information and has been stored in 8-bit chars.
+The ROM stores the encoded text file information and has been stored in 8-bit chars.<br />
 ***soundROM:***
-The ROM, which stores the encoded sound file information and has been stored in 8-bit chunks.
+The ROM, which stores the encoded sound file information and has been stored in 8-bit chunks.<br />
 ***2x2 crossbar switch:***
-This switch is used to swap back and forth with the buzzer and seven-segment display.
+This switch is used to swap back and forth with the buzzer and seven-segment display.<br />
 ***PISO 8-bit Shift Register (Parallel IN Serial OUT):***
-The parallel in serial out 8-bit shift register is utilized to send the data read from the ROMs.
+The parallel in serial out 8-bit shift register is utilized to send the data read from the ROMs.<br />
 ***Receiver:***
-This module is the receiver module where the data received by the light dependant resistor is stored in tentative 8-bit registers and displayed on the seven-segment display or buzzer depending on the select input.
+This module is the receiver module where the data received by the light dependant resistor is stored in tentative 8-bit registers and displayed on the seven-segment display or buzzer depending on the select input.<br />
 ***POSI 8-bit Shift Register (Parallel OUT Serial IN):***
-The parallel-out serial in an 8-bit shift register receives data and stores it temporarily until the 8-bit has been received.
+The parallel-out serial in an 8-bit shift register receives data and stores it temporarily until the 8-bit has been received.<br />
 ***8-bit Register:***
-These registers store the incoming characters for a short amount of time to display them on the seven-segment display. The outputs of these registers then get concatenated and sent to the seven-segment driver as 32-bit vector.
+These registers store the incoming characters for a short amount of time to display them on the seven-segment display. The outputs of these registers then get concatenated and sent to the seven-segment driver as 32-bit vector.<br />
 ***refreshCounte:r***
-This counter is used to refresh the anodes and the cathodes therefore the output of this counter is connected to the driver input.
+This counter is used to refresh the anodes and the cathodes therefore the output of this counter is connected to the driver input.<br />
 ***Driver:***
-The driver module has been implemented to show the outputs of the encoded vector in the seven-segment display.
+The driver module has been implemented to show the outputs of the encoded vector in the seven-segment display.<br />
 ***decoder***
-This module takes the 8-bit encoded data and decodes it according to the ASCII table, and turns it into anodes and cathodes signals.
+This module takes the 8-bit encoded data and decodes it according to the ASCII table, and turns it into anodes and cathodes signals.<br />
