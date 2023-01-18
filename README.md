@@ -11,13 +11,13 @@ The project is working on Basys3 board and the decoder part has been implemented
 1. LiFi
   - fClock
   - sClock
-  1. Transmitter
+  - Transmitter
     - AddressCounter
     - textROM
     - soundROM
     - 2x2 crossbar switch
     - PISO 8-bit Shift Register (Parallel IN Serial OUT)
-  2. Reciever
+  - Reciever
     - POSI 8-bit Shift Register (Parallel OUT Serial IN)
     - 8-bit Register (for 1st char)
     - 8-bit Register (for 2st char)
