@@ -27,13 +27,13 @@ The project is working on Basys3 board and the decoder part has been implemented
     - Driver
       - Decoder
 
-To clarify what each module's role is, modules will be briefly explained below:
-***LiFi:***
-The LiFi module is the top module that implements the receiver and transmitter as intended.
-***fClock:***
-Due to the fact that Basys3 has a 10ns clock and the circuit operates at 0.1s, this module generates a clock with a period of 0.1 seconds.
-***sClock:***
-Since the circuit operates at 0.1s and the transfer happens with 8-bit chunks, this module generates a clock with a period of 0.8 seconds.
+To clarify what each module's role is, modules will be briefly explained below:<br />
+***LiFi:***<br />
+The LiFi module is the top module that implements the receiver and transmitter as intended.<br />
+***fClock:***<br />
+Due to the fact that Basys3 has a 10ns clock and the circuit operates at 0.1s, this module generates a clock with a period of 0.1 seconds.<br />
+***sClock:***<br />
+Since the circuit operates at 0.1s and the transfer happens with 8-bit chunks, this module generates a clock with a period of 0.8 seconds.<br />
 ***Transmitter:***
 This module is the transmitter module where the data stored in the ROMs are transmitted via laser.
 ***AddressCounter:***
